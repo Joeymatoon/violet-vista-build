@@ -10,6 +10,7 @@ import VerifyEmail from "./pages/VerifyEmail";
 import WhoAreYou from "./pages/WhoAreYou";
 import SelectExpertise from "./pages/SelectExpertise";
 import SignupSuccess from "./pages/SignupSuccess";
+import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,15 @@ const App = () => (
           <Route path="/who-are-you" element={<WhoAreYou />} />
           <Route path="/select-expertise" element={<SelectExpertise />} />
           <Route path="/signup-success" element={<SignupSuccess />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/my-applications" element={<Dashboard />} />
+          <Route path="/wallet-earnings" element={<Dashboard />} />
+          <Route path="/messages" element={<Dashboard />} />
+          <Route path="/gigs" element={<Dashboard />} />
+          <Route path="/saved-gigs" element={<Dashboard />} />
+          <Route path="/profile-portfolio" element={<Dashboard />} />
+          <Route path="/feedback-reviews" element={<Dashboard />} />
+          <Route path="/help-support" element={<Dashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
