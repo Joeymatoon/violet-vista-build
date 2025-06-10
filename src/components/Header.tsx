@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary">GigScholars</h1>
+            <Link to="/" className="text-2xl font-bold text-primary">GigScholars</Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -32,11 +33,11 @@ const Header = () => {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="text-foreground">
-              Log In
+            <Button variant="ghost" className="text-foreground" asChild>
+              <Link to="/login">Log In</Link>
             </Button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Sign Up
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
 
@@ -69,11 +70,11 @@ const Header = () => {
                 About
               </a>
               <div className="pt-4 pb-2 space-y-2">
-                <Button variant="ghost" className="w-full text-foreground">
-                  Log In
+                <Button variant="ghost" className="w-full text-foreground" asChild>
+                  <Link to="/login">Log In</Link>
                 </Button>
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                  Sign Up
+                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                  <Link to="/signup">Sign Up</Link>
                 </Button>
               </div>
             </div>
