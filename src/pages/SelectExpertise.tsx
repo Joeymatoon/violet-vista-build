@@ -26,8 +26,7 @@ const SelectExpertise = () => {
 
   const handleProceed = () => {
     if (selectedExpertise.length > 0) {
-      // Navigate to next step or dashboard
-      navigate("/");
+      navigate("/signup-success");
     }
   };
 
